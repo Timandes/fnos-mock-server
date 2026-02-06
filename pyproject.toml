@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fnos-mock-server"
+version = "0.1.0"
+description = "Mock server for FeiNiu fnOS to test pyfnos client"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "websockets>=15.0",
+    "pycryptodome>=3.23.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.25.0",
+    "fnos>=0.10.1",
+]
+
+[project.scripts]
+fnos-mock-server = "server.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.25.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["server"]
+
+[tool.hatch.build.targets.sdist]
+packages = ["server"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

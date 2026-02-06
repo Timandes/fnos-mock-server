@@ -1,0 +1,8 @@
+{
+  "data": {},
+  "errmsg": "Token expired or invalid",
+  "errno": 135168,
+  "reqid": "example_reqid",
+  "result": "fail",
+  "req": "user.authToken"
+}

@@ -1,0 +1,1 @@
+{"data":{"mem":{"reserved":2891165696,"total":34359738368,"free":1921617920,"used":5463900160,"available":26004672512,"cached":23856230400,"buffers":363286528},"swap":{"total":7516188672,"free":7469002752,"used":47185920}},"reqid":"69809ff469809fe500003406002a","result":"succ","rev":"0.1","req":"appcgi.resmon.mem"}

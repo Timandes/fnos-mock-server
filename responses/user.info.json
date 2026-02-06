@@ -1,0 +1,12 @@
+{
+  "data": {
+    "uid": 1000,
+    "name": "testuser",
+    "isAdmin": true,
+    "groups": ["administrators", "users"]
+  },
+  "reqid": "example_reqid",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "user.info"
+}

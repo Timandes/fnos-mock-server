@@ -1,0 +1,40 @@
+{
+    "stor": [
+        {
+            "id": 1,
+            "comment": "",
+            "frsize": 17979408384,
+            "fssize": 50429558784,
+            "level": "basic",
+            "fstype": "ext4",
+            "diskType": "SSD",
+            "quotaCurr": 65536,
+            "quotaMax": 1048576
+        },
+        {
+            "id": 2,
+            "comment": "",
+            "frsize": 3104796082176,
+            "fssize": 7678881169408,
+            "level": "basic",
+            "fstype": "btrfs",
+            "diskType": "SSD",
+            "quotaCurr": 16384,
+            "quotaMax": 1048576
+        },
+        {
+            "id": 3,
+            "comment": "",
+            "frsize": 81920,
+            "fssize": 997923487744,
+            "level": "basic",
+            "fstype": "btrfs",
+            "diskType": "SSD",
+            "quotaCurr": 16384,
+            "quotaMax": -1
+        }
+    ],
+    "uid": 1002,
+    "result": "succ",
+    "reqid": "6986a4fe69868e2a0000f8d31eb1"
+}

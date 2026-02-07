@@ -551,3 +551,110 @@ async def test_reconnection():
     assert client.connected is True
 
     await client.close()
+
+
+@pytest.mark.asyncio
+async def test_docker_compose_list(client: FnosClient):
+    """Test appcgi.dockermgr.composeList request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.dockermgr.composeList", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "rsp" in response
+    assert isinstance(response["rsp"], list)
+
+
+@pytest.mark.asyncio
+async def test_docker_container_list(client: FnosClient):
+    """Test appcgi.dockermgr.containerList request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.dockermgr.containerList", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "rsp" in response
+    assert isinstance(response["rsp"], list)
+
+
+@pytest.mark.asyncio
+async def test_docker_stats(client: FnosClient):
+    """Test appcgi.dockermgr.stats request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.dockermgr.stats", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "rsp" in response
+    assert isinstance(response["rsp"], dict)
+
+
+@pytest.mark.asyncio
+async def test_docker_system_setting_get(client: FnosClient):
+    """Test appcgi.dockermgr.systemSettingGet request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.dockermgr.systemSettingGet", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "rsp" in response
+    assert "mirrorsV2" in response["rsp"]
+    assert "autoBoot" in response["rsp"]
+    assert "status" in response["rsp"]
+
+
+@pytest.mark.asyncio
+async def test_eventlogger_common_list(client: FnosClient):
+    """Test appcgi.eventlogger.common.list request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.eventlogger.common.list", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert response.get("req") == "appcgi.eventlogger.common.list"
+    assert "data" in response
+    assert "total" in response["data"]
+    assert "rows" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_share_smb_opt(client: FnosClient):
+    """Test appcgi.share.smb.opt request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.share.smb.opt", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert response.get("req") == "appcgi.share.smb.opt"
+    assert "data" in response
+    assert "smbEnable" in response["data"]
+    assert "option" in response["data"]
+    assert "timeMachine" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_file_get_acl(client: FnosClient):
+    """Test file.getAcl request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("file.getAcl", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "uver" in response
+    assert isinstance(response["data"], list)
+
+
+@pytest.mark.asyncio
+async def test_notify_unread_total(client: FnosClient):
+    """Test notify.unreadTotal request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("notify.unreadTotal", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "unreadTotal" in response
+
+
+@pytest.mark.asyncio
+async def test_stor_get_user_storage(client: FnosClient):
+    """Test stor.getUserStorage request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.getUserStorage", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "stor" in response
+    assert "uid" in response
+    assert isinstance(response["stor"], list)

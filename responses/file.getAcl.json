@@ -1,0 +1,71 @@
+{
+    "data": [
+        {
+            "defaultPermset": [
+                {
+                    "owner": 6
+                },
+                {
+                    "group": 0
+                },
+                {
+                    "gid": 1001,
+                    "perm": 6
+                },
+                {
+                    "other": 1
+                }
+            ],
+            "permset": [
+                {
+                    "owner": 6
+                },
+                {
+                    "group": 0
+                },
+                {
+                    "gid": 1001,
+                    "perm": 6
+                },
+                {
+                    "other": 1
+                }
+            ]
+        },
+        {
+            "defaultPermset": [
+                {
+                    "owner": 6
+                },
+                {
+                    "uid": 1001,
+                    "perm": 6
+                },
+                {
+                    "group": 0
+                },
+                {
+                    "other": 1
+                }
+            ],
+            "permset": [
+                {
+                    "owner": 6
+                },
+                {
+                    "uid": 1001,
+                    "perm": 6
+                },
+                {
+                    "group": 0
+                },
+                {
+                    "other": 1
+                }
+            ]
+        }
+    ],
+    "uver": 115993656164352,
+    "result": "succ",
+    "reqid": "6986a4f969868e2a0000f8d31ea4"
+}

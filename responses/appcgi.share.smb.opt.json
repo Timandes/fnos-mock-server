@@ -1,0 +1,39 @@
+{
+    "data": {
+        "smbEnable": true,
+        "wsddEnable": true,
+        "mode": 2,
+        "ipv4Addr": "192.168.31.118",
+        "svcPort": 445,
+        "mount": "NAS-9",
+        "option": {
+            "workGroup": "",
+            "oplocks": true,
+            "ntlmv1": false,
+            "serverSigning": 1,
+            "transportEncryption": 1,
+            "supportSmb1": false,
+            "enableFruit": false,
+            "enableDirSort": false,
+            "enableVoteFile": true,
+            "voteFiles": "/._*/.DS_Store/",
+            "deleteVoteFiles": false,
+            "wildcardSearchCache": false,
+            "winsIP": "",
+            "disableMultiConn": false,
+            "enableMultiChannel": true,
+            "aioWrite": 2
+        },
+        "timeMachine": {
+            "enable": false,
+            "vol": 0,
+            "quota": 10737418240,
+            "folder": "",
+            "status": -1
+        }
+    },
+    "reqid": "6986a4fe69868e2a0000f8d31eaf",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.share.smb.opt"
+}

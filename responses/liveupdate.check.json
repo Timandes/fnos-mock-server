@@ -1,0 +1,18 @@
+{
+    "reqid": "69868e2b69868e2a0000f8d30014",
+    "packages": [
+        {
+            "description": "【安全更新】\n1. 新增多项关键安全策略更新，进一步加固系统安全防护\n2. 升级后将默认关闭系统 SSH 服务与用户 SSH 登录权限，请在确认网络环境安全后开启，需分别在【系统设置】-【SSH】和【系统设置】-【用户管理】中开启。\n\n特别感谢无心搁浅688、代文礼、Sarmay、阿牛cium、石乔.、宋、lan、茄年华&ᯤ⁶ᴳ、情绪、ONE 宝宝十点睡、玉尺书生、「Are」&「MR_XIAOBO」、青团、zhengbf、南栀倾寒、花名、徐大大、雪中桃林、鹿鸣、时也,命也、何必在意、何必再忆、Opteron、sherry、T、哎呀小六、Su.Dali、DSS、空城、EWEDL、月光微暖冬亦凉、米恋泥等等官方社群用户以及社区内测组、社区共建团朋友协助定位问题。",
+            "dlkey": "NxgGGmkvKxgVPyo4N2c2bDwLFm4=",
+            "installSpace": "500M",
+            "packageName": "trim",
+            "reboot": 2,
+            "sign": "4e6a5e45f61fb927fe438a6a8152a52e55c99904a606e61e578c3249504b8e35",
+            "size": "278M",
+            "url": "https://download.liveupdate.fnnas.com/x86_64/trim/fnos-1.1.19-1566.deb",
+            "version": "1.1.19",
+            "currentVersion": "1.1.18"
+        }
+    ],
+    "result": "succ"
+}

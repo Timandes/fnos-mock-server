@@ -1,0 +1,11 @@
+{
+    "data": {
+        "hostName": "NAS-9",
+        "hasUsers": true,
+        "trimVersion": "1.1.18"
+    },
+    "reqid": "69869cd269868e2a0000f8d30fe0",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.sysinfo.getHostName"
+}

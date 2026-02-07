@@ -1,1 +1,30 @@
-{"data":{"cpu":{"name":"AMD Ryzen 7 5800H with Radeon Graphics","num":1,"core":8,"thread":16,"maxFreq":4463.0,"temp":[44],"busy":{"all":0,"user":0,"system":0,"iowait":0,"other":0},"loadavg":{"avg1min":0.07999999821186066,"avg5min":0.1599999964237213,"avg15min":0.12999999523162842}}},"reqid":"69809ff469809fe5000034060029","result":"succ","rev":"0.1","req":"appcgi.resmon.cpu"}
+{
+    "data": {
+        "cpu": {
+            "name": "AMD Ryzen 7 5800H with Radeon Graphics",
+            "num": 1,
+            "core": 8,
+            "thread": 16,
+            "maxFreq": 4463.0,
+            "temp": [
+                44
+            ],
+            "busy": {
+                "all": 0,
+                "user": 0,
+                "system": 0,
+                "iowait": 0,
+                "other": 0
+            },
+            "loadavg": {
+                "avg1min": 0.07999999821186066,
+                "avg5min": 0.1599999964237213,
+                "avg15min": 0.12999999523162842
+            }
+        }
+    },
+    "reqid": "69809ff469809fe5000034060029",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.resmon.cpu"
+}

@@ -1,0 +1,48 @@
+{
+    "diskHealth": [
+        {
+            "disk": "sda",
+            "smartSupport": {
+                "available": true,
+                "enabled": true
+            },
+            "smartStatus": {
+                "passed": true
+            },
+            "powerOnTime": 8904,
+            "powerCycleCount": 1354,
+            "temperature": 33
+        },
+        {
+            "disk": "nvme0n1",
+            "smartSupport": {
+                "available": true,
+                "enabled": true
+            },
+            "smartStatus": {
+                "passed": true,
+                "nvme": {
+                    "value": 0
+                }
+            },
+            "powerOnTime": 2772,
+            "powerCycleCount": 62,
+            "temperature": 48
+        },
+        {
+            "disk": "sdb",
+            "smartSupport": {
+                "available": true,
+                "enabled": true
+            },
+            "smartStatus": {
+                "passed": true
+            },
+            "powerOnTime": 57515,
+            "powerCycleCount": 283,
+            "temperature": 33
+        }
+    ],
+    "result": "succ",
+    "reqid": "69869e8d69868e2a0000f8d311bd"
+}

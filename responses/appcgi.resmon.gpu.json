@@ -1,0 +1,29 @@
+{
+    "data": {
+        "num": 1,
+        "gpu": [
+            {
+                "index": 1,
+                "vendor": "Advanced Micro Devices, Inc. [AMD/ATI]",
+                "vendorId": 4098,
+                "device": "Radeon(TM) Graphics",
+                "deviceId": 5688,
+                "subDeviceId": 197,
+                "busy": 0,
+                "ram": {
+                    "total": 2147483648,
+                    "used": 17502208,
+                    "free": 2129981440
+                },
+                "temp": 48,
+                "engine": {
+                    "encoder": 0
+                }
+            }
+        ]
+    },
+    "reqid": "69868e2b69868e2a0000f8d3001b",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.resmon.gpu"
+}

@@ -1,0 +1,28 @@
+{
+    "data": {
+        "timezone": {
+            "offset": "+08:00",
+            "zone": "Asia/Shanghai",
+            "zone_name": "北京,重庆,香港特别行政区,乌鲁木齐,台北"
+        },
+        "ntpEnable": true,
+        "time": 1770429650,
+        "ntpPool": [
+            "ntp.tencent.com"
+        ],
+        "sysNtpPool": [
+            "ntp.tencent.com",
+            "ntp.aliyun.com",
+            "pool.ntp.org",
+            "time.google.com",
+            "time.cloudflare.com",
+            "time.apple.com",
+            "time.windows.com",
+            "time.nist.gov"
+        ]
+    },
+    "reqid": "69869cd269868e2a0000f8d30fe1",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.sysinfo.getTimeSetting"
+}

@@ -1,0 +1,193 @@
+{
+    "result": "succ",
+    "reqid": "69868e2a69868e2a0000f8d3000a",
+    "data": {
+        "list": [
+            {
+                "appName": "1Panel",
+                "appID": "4",
+                "entryName": "1Panel.Application",
+                "title": "1Panel",
+                "desc": "1Panel Web UI",
+                "icon": "/app-center-static/serviceicon/1Panel/ui/images/icon-{0}.png",
+                "type": "url",
+                "uri": {
+                    "protocol": "http",
+                    "host": "",
+                    "port": "18090",
+                    "path": "/",
+                    "fnDomain": "1panel"
+                },
+                "microApp": false,
+                "nativeApp": false,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [],
+                "isDisplay": true
+            },
+            {
+                "appName": "qBittorrent",
+                "appID": "5",
+                "entryName": "qBittorrent.Application",
+                "title": "qBittorrent",
+                "desc": "qBittorrent Web UI",
+                "icon": "/app-center-static/serviceicon/qBittorrent/ui/images/qbittorrent-{0}.png",
+                "type": "url",
+                "uri": {
+                    "protocol": "http",
+                    "host": "",
+                    "port": "8085",
+                    "path": "/",
+                    "fnDomain": "qbittorrent"
+                },
+                "microApp": false,
+                "nativeApp": false,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [],
+                "isDisplay": true
+            },
+            {
+                "appName": "syncthing",
+                "appID": "2",
+                "entryName": "syncthing.Application",
+                "title": "Syncthing",
+                "desc": "Automatically sync files via secure, distributed technology.",
+                "icon": "/app-center-static/serviceicon/syncthing/app/images/syncthing-{0}.png",
+                "type": "url",
+                "uri": {
+                    "protocol": "http",
+                    "host": "",
+                    "port": "8384",
+                    "path": "/",
+                    "fnDomain": "syncthing"
+                },
+                "microApp": false,
+                "nativeApp": false,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [],
+                "isDisplay": true
+            },
+            {
+                "appName": "trim.iscsi",
+                "appID": "1",
+                "entryName": "trim.iscsi.Application",
+                "title": "iSCSI",
+                "desc": "",
+                "icon": "/app-center-static/serviceicon/trim.iscsi/ui/images/icon_{0}.png",
+                "type": "iframe",
+                "uri": {
+                    "protocol": "",
+                    "host": "",
+                    "port": "",
+                    "path": "/iscsi/",
+                    "fnDomain": "trim-iscsi"
+                },
+                "microApp": true,
+                "nativeApp": true,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [],
+                "isDisplay": true
+            },
+            {
+                "appName": "trim.photos",
+                "appID": "3",
+                "entryName": "trim.photos",
+                "title": "相册",
+                "desc": "相册",
+                "icon": "/app-center-static/serviceicon/trim.photos/ui/images/icon_{0}.png",
+                "type": "url",
+                "uri": {
+                    "protocol": "",
+                    "host": "",
+                    "port": "",
+                    "path": "/p",
+                    "fnDomain": "trim-photos"
+                },
+                "microApp": false,
+                "nativeApp": true,
+                "fullUrl": "",
+                "status": "stopped",
+                "fileTypes": [],
+                "isDisplay": true
+            },
+            {
+                "appName": "trim.text-editor",
+                "appID": "7",
+                "entryName": "trim.text-editor",
+                "title": "文本编辑器",
+                "desc": "文本编辑器",
+                "icon": "/app-center-static/serviceicon/trim.text-editor/ui/images/icon_{0}.png",
+                "type": "iframe",
+                "uri": {
+                    "protocol": "",
+                    "host": "",
+                    "port": "",
+                    "path": "/app/text-editor/?v=0.1.0",
+                    "fnDomain": "trim-text-editor"
+                },
+                "microApp": true,
+                "nativeApp": false,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [
+                    "txt",
+                    "sml",
+                    "diff",
+                    "erl",
+                    "lst",
+                    "out",
+                    "patch",
+                    "srt",
+                    "ssa",
+                    "ass",
+                    "nfo",
+                    "log",
+                    "vtt",
+                    "rtf",
+                    "ini",
+                    "sh",
+                    "conf",
+                    "toml",
+                    "json",
+                    "yml",
+                    "yaml",
+                    "js",
+                    "py",
+                    "php",
+                    "xml",
+                    "html",
+                    "markdown",
+                    "md",
+                    "mdown",
+                    "mkdn"
+                ],
+                "isDisplay": false
+            },
+            {
+                "appName": "trim.vm",
+                "appID": "6",
+                "entryName": "trim.vm",
+                "title": "虚拟机",
+                "desc": "虚拟机",
+                "icon": "/app-center-static/serviceicon/trim.vm/ui/images/icon_{0}.png",
+                "type": "iframe",
+                "uri": {
+                    "protocol": "",
+                    "host": "",
+                    "port": "",
+                    "path": "/vm?ver=0.9.0",
+                    "fnDomain": "trim-vm"
+                },
+                "microApp": true,
+                "nativeApp": true,
+                "fullUrl": "",
+                "status": "running",
+                "fileTypes": [],
+                "isDisplay": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "data": {
+        "ifs": [
+            {
+                "name": "bond1",
+                "index": 1,
+                "ifType": 1,
+                "receive": 222301,
+                "transmit": 7070661,
+                "bond": true
+            }
+        ]
+    },
+    "reqid": "6986a04b69868e2a0000f8d313f8",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.resmon.net"
+}

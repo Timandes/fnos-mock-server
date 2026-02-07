@@ -1,0 +1,24 @@
+{
+    "files": [
+        {
+            "name": "data",
+            "v": 2,
+            "uid": 0,
+            "mtim": 1765460179,
+            "btim": 1764395348,
+            "dir": 1,
+            "trashbinAccess": 1
+        },
+        {
+            "name": "files",
+            "v": 2,
+            "uid": 0,
+            "mtim": 1765451429,
+            "btim": 1765446855,
+            "dir": 1,
+            "trashbinAccess": 0
+        }
+    ],
+    "uver": 115993656164352,
+    "reqid": "69869c5b69868e2a0000f8d30f52"
+}

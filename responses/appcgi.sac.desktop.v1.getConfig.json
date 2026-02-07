@@ -1,0 +1,169 @@
+{
+    "result": "succ",
+    "reqid": "69868e2a69868e2a0000f8d3000b",
+    "data": {
+        "userPreference": {
+            "theme": 10,
+            "wallpaperType": 100,
+            "singlePhotoWpId": 1,
+            "singleColorWpId": 7,
+            "dynamicWpId": 8,
+            "fillModeType": 0,
+            "bgFillColorCode": "#444444",
+            "bgOpacity": 100
+        },
+        "singlePhotoWallpapers": [
+            {
+                "id": 1,
+                "type": 100,
+                "name": "Sys Photo1",
+                "url": "/static/bg/wallpaper-1.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-1.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 2,
+                "type": 100,
+                "name": "Sys Photo2",
+                "url": "/static/bg/wallpaper-2.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-2.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 3,
+                "type": 100,
+                "name": "Sys Photo3",
+                "url": "/static/bg/wallpaper-3.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-3.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 4,
+                "type": 100,
+                "name": "Sys Photo4",
+                "url": "/static/bg/wallpaper-4.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-4.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 5,
+                "type": 100,
+                "name": "Sys Photo5",
+                "url": "/static/bg/wallpaper-5.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-5.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 6,
+                "type": 100,
+                "name": "Sys Photo6",
+                "url": "/static/bg/wallpaper-6.webp",
+                "thumbnailUrl": "/static/thumbnail_bg/wallpaper-6.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            }
+        ],
+        "singleColorWallpapers": [
+            {
+                "id": 7,
+                "type": 300,
+                "name": "Sys Color1",
+                "colorWallpaperCode": "#444444",
+                "colorWallpaperOpacity": 100,
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            }
+        ],
+        "dynamicWallpapers": [
+            {
+                "id": 8,
+                "type": 500,
+                "name": "Sys Dynamic1",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-1-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-1-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-1-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-1-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 9,
+                "type": 500,
+                "name": "Sys Dynamic2",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-2-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-2-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-2-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-2-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 10,
+                "type": 500,
+                "name": "Sys Dynamic3",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-3-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-3-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-3-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-3-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 11,
+                "type": 500,
+                "name": "Sys Dynamic4",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-4-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-4-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-4-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-4-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 12,
+                "type": 500,
+                "name": "Sys Dynamic5",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-5-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-5-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-5-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-5-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 13,
+                "type": 500,
+                "name": "Sys Dynamic6",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-6-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-6-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-6-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-6-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            },
+            {
+                "id": 14,
+                "type": 500,
+                "name": "Sys Dynamic7",
+                "isDynamic": true,
+                "dynamicUrl1": "/static/bg/live/wallpaper-7-light.webp",
+                "thumbnailDynamicUrl1": "/static/thumbnail_bg/live/wallpaper-7-light.webp",
+                "dynamicUrl2": "/static/bg/live/wallpaper-7-dark.webp",
+                "thumbnailDynamicUrl2": "/static/thumbnail_bg/live/wallpaper-7-dark.webp",
+                "createdAt": "2025-10-12 10:42:09",
+                "updatedAt": "2025-10-12 10:42:09"
+            }
+        ]
+    }
+}

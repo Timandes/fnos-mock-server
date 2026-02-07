@@ -100,6 +100,261 @@ async def test_resource_monitor_memory(client: FnosClient):
 
 
 @pytest.mark.asyncio
+async def test_resource_monitor_gpu(client: FnosClient):
+    """Test appcgi.resmon.gpu request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.resmon.gpu", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.resmon.gpu"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "gpu" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_storage_general(client: FnosClient):
+    """Test stor.general request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.general", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "array" in response
+    assert "block" in response
+
+
+@pytest.mark.asyncio
+async def test_resource_monitor_general(client: FnosClient):
+    """Test appcgi.resmon.gen request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.resmon.gen", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.resmon.gen"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "item" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_storage_state2(client: FnosClient):
+    """Test stor.state2 request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.state2", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "state" in response
+
+
+@pytest.mark.asyncio
+async def test_app_store_list(client: FnosClient):
+    """Test appcgi.sac.entry.v1.appStoreList request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sac.entry.v1.appStoreList", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "list" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_liveupdate_check(client: FnosClient):
+    """Test liveupdate.check request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("liveupdate.check", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "packages" in response
+
+
+@pytest.mark.asyncio
+async def test_notify_list(client: FnosClient):
+    """Test notify.list request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("notify.list", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "notifyList" in response
+    assert "total" in response
+
+
+@pytest.mark.asyncio
+async def test_get_uptime(client: FnosClient):
+    """Test appcgi.sysinfo.getUptime request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getUptime", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getUptime"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "uptime" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_desktop_get_config(client: FnosClient):
+    """Test appcgi.sac.desktop.v1.getConfig request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sac.desktop.v1.getConfig", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "userPreference" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_team_ls_dir(client: FnosClient):
+    """Test file.team.lsDir request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("file.team.lsDir", {})
+    assert response is not None
+    assert "files" in response
+    assert "uver" in response
+
+
+@pytest.mark.asyncio
+async def test_get_machine_id(client: FnosClient):
+    """Test appcgi.sysinfo.getMachineId request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getMachineId", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getMachineId"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "machineId" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_get_hardware_info(client: FnosClient):
+    """Test appcgi.sysinfo.getHardwareInfo request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getHardwareInfo", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getHardwareInfo"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "cpu" in response["data"]
+    assert "mem" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_network_net_list(client: FnosClient):
+    """Test appcgi.network.net.list request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.network.net.list", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.network.net.list"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "net" in response["data"]
+    assert "ifs" in response["data"]["net"]
+
+
+@pytest.mark.asyncio
+async def test_user_list(client: FnosClient):
+    """Test user.list request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("user.list", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "users" in response
+    assert "uver" in response
+
+
+@pytest.mark.asyncio
+async def test_get_hostname_request(client: FnosClient):
+    """Test appcgi.sysinfo.getHostName request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getHostName", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getHostName"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "hostName" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_network_net_detect(client: FnosClient):
+    """Test appcgi.network.net.detect request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.network.net.detect", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.network.net.detect"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "ifs" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_get_time_setting(client: FnosClient):
+    """Test appcgi.sysinfo.getTimeSetting request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getTimeSetting", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getTimeSetting"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "timezone" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_stor_list_stor(client: FnosClient):
+    """Test stor.listStor request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.listStor", {})
+    assert response is not None
+    assert "array" in response
+
+
+@pytest.mark.asyncio
+async def test_stor_state(client: FnosClient):
+    """Test stor.state request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.state", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "state" in response
+
+
+@pytest.mark.asyncio
+async def test_stor_disk_health(client: FnosClient):
+    """Test stor.diskHealth request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.diskHealth", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "diskHealth" in response
+
+
+@pytest.mark.asyncio
+async def test_stor_list_disk(client: FnosClient):
+    """Test stor.listDisk request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.listDisk", {})
+    assert response is not None
+    assert "disk" in response
+
+
+@pytest.mark.asyncio
+async def test_stor_disk_smart(client: FnosClient):
+    """Test stor.diskSmart request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.diskSmart", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "smart" in response
+
+
+@pytest.mark.asyncio
+async def test_resource_monitor_net(client: FnosClient):
+    """Test appcgi.resmon.net request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.resmon.net", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.resmon.net"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "ifs" in response["data"]
+
+
+@pytest.mark.asyncio
 async def test_heartbeat_ping(client: FnosClient):
     """Test ping/pong heartbeat mechanism."""
     # Ping is sent automatically by the client

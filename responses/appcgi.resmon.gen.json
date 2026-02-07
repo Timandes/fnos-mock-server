@@ -1,0 +1,20 @@
+{
+    "data": {
+        "item": {
+            "storeSpeed": {
+                "read": 4194304,
+                "write": 0
+            },
+            "netSpeed": {
+                "transmit": 4926037,
+                "receive": 180702
+            },
+            "cpuBusy": 0,
+            "memPercent": 7
+        }
+    },
+    "reqid": "69868e2a69868e2a0000f8d30010",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.resmon.gen"
+}

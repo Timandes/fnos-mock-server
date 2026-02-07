@@ -355,6 +355,114 @@ async def test_resource_monitor_net(client: FnosClient):
 
 
 @pytest.mark.asyncio
+async def test_resource_monitor_disk(client: FnosClient):
+    """Test appcgi.resmon.disk request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.resmon.disk", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.resmon.disk"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "disk" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_stor_calc_space(client: FnosClient):
+    """Test stor.calcSpace request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("stor.calcSpace", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "storTotal" in response
+    assert "fssizeStor" in response
+    assert "frsizeStor" in response
+
+
+@pytest.mark.asyncio
+async def test_get_trim_version(client: FnosClient):
+    """Test appcgi.sysinfo.getTrimVersion request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sysinfo.getTrimVersion", {})
+    assert response is not None
+    assert response.get("req") == "appcgi.sysinfo.getTrimVersion"
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "trimVersion" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_ups_status(client: FnosClient):
+    """Test appcgi.sac.ups.v1.status request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("appcgi.sac.ups.v1.status", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "data" in response
+    assert "upsEnabled" in response["data"]
+    assert "currentUps" in response["data"]
+
+
+@pytest.mark.asyncio
+async def test_user_is_admin(client: FnosClient):
+    """Test user.isAdmin request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("user.isAdmin", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "admin" in response
+
+
+@pytest.mark.asyncio
+async def test_user_list_ug(client: FnosClient):
+    """Test user.listUG request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("user.listUG", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "users" in response
+    assert "groups" in response
+
+
+@pytest.mark.asyncio
+async def test_user_group_users(client: FnosClient):
+    """Test user.groupUsers request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("user.groupUsers", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+    assert "groups" in response
+
+
+@pytest.mark.asyncio
+async def test_file_ls(client: FnosClient):
+    """Test file.ls request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("file.ls", {})
+    assert response is not None
+    assert "files" in response
+    assert "uver" in response
+
+
+@pytest.mark.asyncio
+async def test_file_mkdir(client: FnosClient):
+    """Test file.mkdir request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("file.mkdir", {})
+    assert response is not None
+    assert response.get("result") == "succ"
+
+
+@pytest.mark.asyncio
+async def test_file_rm(client: FnosClient):
+    """Test file.rm request."""
+    await client.login("testuser", "testpass")
+    response = await client.request_payload_with_response("file.rm", {})
+    assert response is not None
+    assert "taskId" in response
+    assert "sysNotify" in response
+
+
+@pytest.mark.asyncio
 async def test_heartbeat_ping(client: FnosClient):
     """Test ping/pong heartbeat mechanism."""
     # Ping is sent automatically by the client

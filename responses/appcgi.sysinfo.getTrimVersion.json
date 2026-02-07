@@ -1,0 +1,9 @@
+{
+    "data": {
+        "trimVersion": "1.1.18"
+    },
+    "reqid": "177043354107906cb86e3f560",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.sysinfo.getTrimVersion"
+}

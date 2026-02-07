@@ -1,0 +1,26 @@
+{
+    "result": "succ",
+    "reqid": "17704339209711b035b16864e",
+    "data": {
+        "upsEnabled": false,
+        "upsType": "",
+        "upsTypeName": "",
+        "shutdownUpsEnabled": false,
+        "currentUps": {
+            "name": "",
+            "vendor": "",
+            "product": "",
+            "vendorId": "",
+            "productId": "",
+            "status": false,
+            "batteryCharge": "",
+            "powerSupplyType": "",
+            "runtime": "",
+            "shutdownPolicyType": "",
+            "shutdownPolicyOnBattValue": 0,
+            "shutdownPolicyLowBattValue": 0,
+            "shutdownPolicyUnit": "",
+            "batteryCapacity": ""
+        }
+    }
+}

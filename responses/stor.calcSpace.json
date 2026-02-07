@@ -1,0 +1,13 @@
+{
+    "fssizeSys": 63770718208,
+    "frsizeSys": 48454230016,
+    "sysDiskType": "SSD",
+    "storTotal": 3,
+    "fssizeStor": 8727234215936,
+    "frsizeStor": 3122775572480,
+    "HDD": 0,
+    "SSD": 3,
+    "USB": 0,
+    "result": "succ",
+    "reqid": "6986a4f669868e2a0000f8d31e92"
+}

@@ -1,0 +1,19 @@
+{
+    "uver": 115993656164352,
+    "groups": [
+        {
+            "group": "Administrators",
+            "gid": 1000,
+            "users": [
+                1000,
+                1002
+            ]
+        },
+        {
+            "group": "Users",
+            "gid": 1001
+        }
+    ],
+    "result": "succ",
+    "reqid": "6986a5116986a5110000fbdf0008"
+}

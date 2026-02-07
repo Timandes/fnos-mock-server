@@ -1,0 +1,35 @@
+{
+    "data": {
+        "num": 3,
+        "disk": [
+            {
+                "name": "sda",
+                "temp": 32,
+                "standby": false,
+                "busy": 2,
+                "read": 0,
+                "write": 66560
+            },
+            {
+                "name": "sdb",
+                "temp": 32,
+                "standby": false,
+                "busy": 3,
+                "read": 8388608,
+                "write": 0
+            },
+            {
+                "name": "nvme0n1",
+                "temp": 47,
+                "standby": false,
+                "busy": 0,
+                "read": 0,
+                "write": 0
+            }
+        ]
+    },
+    "reqid": "1770431853291ae6ba68ccb9b",
+    "result": "succ",
+    "rev": "0.1",
+    "req": "appcgi.resmon.disk"
+}

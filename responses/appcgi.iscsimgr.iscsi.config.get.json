@@ -1,0 +1,1 @@
+{"data": {"port": 3260, "queueDepth": 64, "chap": false, "mutualChap": false, "userid": "", "password": "", "mutualUserid": "", "mutualPassword": ""}, "reqid": "6986d3696986a5110000fbdf3128", "result": "succ", "rev": "0.1", "req": "appcgi.iscsimgr.iscsi.config.get"}

@@ -28,6 +28,17 @@ uv run python -m server.main
 uv run python -m server.main -p 8080 --log-level DEBUG
 ```
 
+### 两步验证 Mock
+
+默认情况下所有用户仍按普通登录成功处理。需要模拟两步验证时，通过环境变量指定触发用户：
+
+```bash
+FNOS_MOCK_TWOFA_USERS=admin,testuser uv run python -m server.main
+```
+
+- `FNOS_MOCK_TWOFA_USERS`: 逗号分隔的用户名列表；默认空清单，即没有用户触发两步验证；设置为 `*` 表示所有用户都触发两步验证
+- `FNOS_MOCK_TWOFA_SECURE_EMAIL`: 可选，覆盖响应中的脱敏安全邮箱，默认 `tim*****@gmail.com`
+
 ### 命令行参数
 
 - `-p, --port`: WebSocket 服务器端口（默认：5666）

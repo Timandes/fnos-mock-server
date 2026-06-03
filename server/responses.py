@@ -3,6 +3,7 @@
 import json
 import logging
 import os
+import secrets
 from typing import Any
 
 from server.utils import (
@@ -159,6 +160,57 @@ def build_login_response(reqid: str) -> dict[str, Any]:
     }
 
     logger.debug(f'Built login response for reqid={reqid}')
+    return response
+
+
+def build_twofa_challenge_response(
+    reqid: str,
+    secure_email: str = 'tim*****@gmail.com',
+    access_token: str | None = None,
+) -> dict[str, Any]:
+    """Build response for a login that requires two-factor verification.
+
+    Args:
+        reqid: Request ID
+        secure_email: Masked secure email shown to the client
+        access_token: Optional fixed access token for deterministic samples
+
+    Returns:
+        Two-factor challenge response dictionary
+    """
+    response = {
+        'isTwofaEnforced': True,
+        'isBindTwofaSecret': True,
+        'isBindSecureEmail': True,
+        'secureEmail': secure_email,
+        'isTrustedDevice': False,
+        'accessToken': access_token or generate_random_token(24),
+        'result': 'succ',
+        'reqid': reqid,
+    }
+
+    logger.debug(f'Built two-factor challenge response for reqid={reqid}')
+    return response
+
+
+def build_twofa_login_response(reqid: str) -> dict[str, Any]:
+    """Build final login response after successful two-factor verification.
+
+    Args:
+        reqid: Request ID
+
+    Returns:
+        Login response dictionary with uid/admin fields
+    """
+    response = build_login_response(reqid)
+    response.update(
+        {
+            'uid': 1001,
+            'admin': True,
+            'backId': secrets.token_hex(8),
+            'machineId': secrets.token_hex(20),
+        }
+    )
     return response
 
 

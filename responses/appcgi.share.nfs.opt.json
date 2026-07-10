@@ -1,0 +1,12 @@
+{
+  "data": {
+    "nfsEnable": true,
+    "mode": 1,
+    "ipv4Addr": "192.0.2.1",
+    "path": "/vol1/example"
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.share.nfs.opt"
+}

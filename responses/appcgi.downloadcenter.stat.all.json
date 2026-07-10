@@ -1,0 +1,14 @@
+{
+  "data": {
+    "rsp": {
+      "dl_speed": 0,
+      "up_speed": 0,
+      "dl_total_size": 0,
+      "up_total_size": 0
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.downloadcenter.stat.all"
+}

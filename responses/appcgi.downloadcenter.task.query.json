@@ -1,0 +1,14 @@
+{
+  "data": {
+    "block": {
+      "id": "<redacted>",
+      "total_size": 102,
+      "offset": 0,
+      "data": "{\"stats\":{\"all\":0,\"downloading\":0,\"completed\":0,\"seeding\":0,\"active\":0,\"idle\":0,\"paused\":0,\"error\":0}}"
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.downloadcenter.task.query"
+}

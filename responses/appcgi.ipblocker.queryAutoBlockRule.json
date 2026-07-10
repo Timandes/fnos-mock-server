@@ -1,0 +1,12 @@
+{
+  "data": {
+    "enable": false,
+    "time": 5,
+    "failedCount": 10,
+    "banPeriod": 1
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.ipblocker.queryAutoBlockRule"
+}

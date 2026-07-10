@@ -1,0 +1,120 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": [
+    {
+      "name": "tencentcloud",
+      "alias": "腾讯云",
+      "type": "BuildIn",
+      "accessKeyAlias": "SecretID",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "txtSupport": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "aliyun",
+      "alias": "阿里云",
+      "type": "BuildIn",
+      "accessKeyAlias": "AccessKey",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "txtSupport": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "huawei",
+      "alias": "华为云",
+      "type": "BuildIn",
+      "accessKeyAlias": "AccessKey",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "txtSupport": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "oraydns",
+      "alias": "花生壳",
+      "type": "BuildIn",
+      "accessKeyAlias": "用户名",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 0,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "changeip",
+      "alias": "ChangeIP.com",
+      "type": "BuildIn",
+      "accessKeyAlias": "邮箱",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 0,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "cloudflare",
+      "alias": "Cloudflare",
+      "type": "BuildIn",
+      "accessKeyAlias": "邮箱",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "txtSupport": 1,
+      "accessKeyRequired": false
+    },
+    {
+      "name": "dnspod",
+      "alias": "DNSPod.cn",
+      "type": "BuildIn",
+      "accessKeyAlias": "API ID",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "txtSupport": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "duckdns",
+      "alias": "Duck DNS",
+      "type": "BuildIn",
+      "accessKeyAlias": "/",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "dyndns",
+      "alias": "DynDNS",
+      "type": "BuildIn",
+      "accessKeyAlias": "用户名",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 0,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "dynu",
+      "alias": "Dynu.com",
+      "type": "BuildIn",
+      "accessKeyAlias": "Client ID",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "accessKeyRequired": true
+    },
+    {
+      "name": "freedns",
+      "alias": "FreeDNS",
+      "type": "BuildIn",
+      "accessKeyAlias": "用户名",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "singleIpRecord": true,
+      "accessKeyRequired": false
+    },
+    {
+      "name": "noip",
+      "alias": "No-IP.com",
+      "type": "BuildIn",
+      "accessKeyAlias": "用户名",
+      "accessSecretAlias": "<redacted>",
+      "ipv6Support": 1,
+      "accessKeyRequired": true
+    }
+  ]
+}

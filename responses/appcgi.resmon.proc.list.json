@@ -1,0 +1,32 @@
+{
+  "data": {
+    "list": [
+      {
+        "name": "example-service",
+        "pid": 1001,
+        "status": "S",
+        "cpu": 0.1,
+        "cpuTime": 120,
+        "memory": 33554432,
+        "ioRead": 0,
+        "ioWrite": 4096,
+        "uid": 0
+      },
+      {
+        "name": "example-worker",
+        "pid": 1002,
+        "status": "S",
+        "cpu": 0.0,
+        "cpuTime": 60,
+        "memory": 16777216,
+        "ioRead": 0,
+        "ioWrite": 0,
+        "uid": 1000
+      }
+    ]
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.resmon.proc.list"
+}

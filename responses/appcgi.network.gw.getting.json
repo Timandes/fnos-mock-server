@@ -1,0 +1,18 @@
+{
+  "data": {
+    "schema": {
+      "http": {
+        "port": 5666
+      },
+      "https": {
+        "port": 5667
+      }
+    },
+    "force_https": false,
+    "redirect": true
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.network.gw.getting"
+}

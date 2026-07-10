@@ -1,0 +1,44 @@
+{
+  "data": {
+    "srv": [
+      {
+        "key": "example.core",
+        "name": "example_core",
+        "displayName": "Example Core",
+        "system": true,
+        "proc": [
+          {
+            "name": "example-service",
+            "cpu": 0.1,
+            "cpuTime": 120,
+            "memory": 33554432,
+            "ioRead": 0,
+            "ioWrite": 4096,
+            "pid": 1001
+          }
+        ]
+      },
+      {
+        "key": "example.worker",
+        "name": "example_worker",
+        "displayName": "Example Worker",
+        "system": false,
+        "proc": [
+          {
+            "name": "example-worker",
+            "cpu": 0.0,
+            "cpuTime": 60,
+            "memory": 16777216,
+            "ioRead": 0,
+            "ioWrite": 0,
+            "pid": 1002
+          }
+        ]
+      }
+    ]
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.resmon.proc.srv"
+}

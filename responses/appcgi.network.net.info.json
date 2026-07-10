@@ -1,0 +1,64 @@
+{
+  "data": {
+    "ifs": {
+      "name": "eth0",
+      "index": 1,
+      "ifType": 1,
+      "state": 100,
+      "onlink": true,
+      "enable": true,
+      "running": true,
+      "isOvsPort": true,
+      "hwAddr": "00:00:5E:00:53:01",
+      "speed": 20000,
+      "duplex": true,
+      "setMtu": false,
+      "mtu": 1500,
+      "minMtu": 68,
+      "maxMtu": 9600,
+      "wireless": false,
+      "ifMode": 4,
+      "slaves": [
+        {
+          "name": "eth1",
+          "running": true,
+          "speed": 10000,
+          "state": 100
+        },
+        {
+          "name": "eth2",
+          "running": true,
+          "speed": 10000,
+          "state": 100
+        }
+      ],
+      "ipv4": [
+        "192.0.2.2"
+      ],
+      "ipv4Addr": "192.0.2.2",
+      "ipv4Mode": "manual",
+      "ipv4Broad": "192.0.2.255",
+      "ipv4Gateway": "192.0.2.1",
+      "ipv4Mask": "255.255.255.0",
+      "ipv4Dns": "192.0.2.1",
+      "ipv4Dhcp": false,
+      "defaultIpv4Gateway": false,
+      "ipv6": [
+        {
+          "addr": "2001:db8::1",
+          "prefixLen": 64,
+          "scope": "link"
+        }
+      ],
+      "ipv6Mode": "auto",
+      "ipv6Gateway": "",
+      "defaultIpv6Gateway": false,
+      "ipv6Dns": "",
+      "eui64": false
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.network.net.info"
+}

@@ -1,0 +1,20 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": [
+    {
+      "id": 1,
+      "domain": "www.timandes.cn",
+      "encryptType": "ECDSA",
+      "issuedBy": "fnOS",
+      "SAN": "fnOS",
+      "status": "suc",
+      "validFrom": 1704067200000,
+      "validTo": 4102444800000,
+      "desc": "系统自签名证书",
+      "isDefault": 0,
+      "source": "system",
+      "renewal": 0
+    }
+  ]
+}

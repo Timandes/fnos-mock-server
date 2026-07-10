@@ -1,0 +1,24 @@
+{
+  "data": {
+    "path": [],
+    "count": 0,
+    "sharesCount": {
+      "user": 0,
+      "others": 0,
+      "mounted": 0,
+      "external": 0,
+      "appshare": 0,
+      "team": 0
+    },
+    "extended": {
+      "mounted": [],
+      "external": [],
+      "appShare": [],
+      "team": []
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.share.dlna.share.opt"
+}

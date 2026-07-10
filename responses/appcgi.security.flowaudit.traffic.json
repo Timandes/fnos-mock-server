@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "process": "example-service",
+      "pid": 1001,
+      "fw": 2,
+      "tcp": {
+        "rx": 4096,
+        "tx": 2048,
+        "ports": [
+          8080
+        ]
+      },
+      "udp": {
+        "rx": 0,
+        "tx": 0
+      }
+    },
+    {
+      "process": "example-worker",
+      "pid": 1002,
+      "fw": 0,
+      "tcp": {
+        "rx": 1024,
+        "tx": 512
+      },
+      "udp": {
+        "rx": 256,
+        "tx": 128,
+        "ports": [
+          5353
+        ]
+      }
+    }
+  ],
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.security.flowaudit.traffic"
+}

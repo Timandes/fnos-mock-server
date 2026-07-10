@@ -1,0 +1,10 @@
+{
+  "data": {
+    "dlnaEnable": true,
+    "port": 8200
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.share.dlna.opt"
+}

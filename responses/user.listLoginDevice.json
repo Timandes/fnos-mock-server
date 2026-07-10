@@ -1,0 +1,20 @@
+{
+  "loginDevice": [
+    {
+      "tid": "<redacted>",
+      "deviceName": "Example Browser",
+      "deviceType": "Browser",
+      "loginTime": 1704067200,
+      "activeTime": 1704067200,
+      "currentDevice": true
+    },
+    {
+      "tid": "<redacted>",
+      "deviceName": "Example Mobile Device",
+      "deviceType": "MOBILE",
+      "loginTime": 1704067200
+    }
+  ],
+  "result": "succ",
+  "reqid": "0000000000000000000000000000"
+}

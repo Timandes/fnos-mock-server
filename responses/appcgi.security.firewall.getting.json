@@ -1,0 +1,186 @@
+{
+  "data": [
+    {
+      "profile": "default",
+      "enable": false,
+      "txfallback": true,
+      "rxfallback": true,
+      "workmode": "auto",
+      "allowlan": true,
+      "rules": [
+        {
+          "ifname": "ALL",
+          "flowdir": 1,
+          "ports": {
+            "type": 0,
+            "ranges": {
+              "ports": [
+                21,
+                53,
+                67,
+                68,
+                80,
+                111,
+                123,
+                137,
+                138,
+                139,
+                443,
+                445,
+                1900,
+                2049,
+                3702,
+                5005,
+                5006,
+                5353,
+                5355,
+                5666,
+                5667,
+                8000,
+                8001,
+                9024,
+                41750,
+                42423
+              ],
+              "range": {
+                "from": 0,
+                "to": 0
+              },
+              "process": []
+            }
+          },
+          "pro": 0,
+          "ips": {
+            "type": 0,
+            "ip": "192.0.2.1",
+            "cidr": {
+              "net": "",
+              "len": 0
+            },
+            "country": ""
+          },
+          "allow": true,
+          "priority": 0,
+          "memo": "系统默认服务规则",
+          "enable": true
+        },
+        {
+          "ifname": "ALL",
+          "flowdir": 0,
+          "ports": {
+            "type": 0,
+            "ranges": {
+              "ports": [
+                21,
+                53,
+                67,
+                68,
+                80,
+                111,
+                123,
+                137,
+                138,
+                139,
+                443,
+                445,
+                1900,
+                2049,
+                3702,
+                5005,
+                5006,
+                5353,
+                5355,
+                5666,
+                5667,
+                8000,
+                8001,
+                9024,
+                41750,
+                42423
+              ],
+              "range": {
+                "from": 0,
+                "to": 0
+              },
+              "process": []
+            }
+          },
+          "pro": 0,
+          "ips": {
+            "type": 0,
+            "ip": "192.0.2.1",
+            "cidr": {
+              "net": "",
+              "len": 0
+            },
+            "country": ""
+          },
+          "allow": true,
+          "priority": 1,
+          "enable": true
+        },
+        {
+          "ifname": "ALL",
+          "flowdir": 1,
+          "ports": {
+            "type": 1,
+            "ranges": {
+              "ports": [],
+              "range": {
+                "from": 55536,
+                "to": 55899
+              },
+              "process": []
+            }
+          },
+          "pro": 1,
+          "ips": {
+            "type": 0,
+            "ip": "192.0.2.1",
+            "cidr": {
+              "net": "",
+              "len": 0
+            },
+            "country": ""
+          },
+          "allow": true,
+          "priority": 2,
+          "memo": "ftp pasv模式端口范围",
+          "enable": true
+        },
+        {
+          "ifname": "ALL",
+          "flowdir": 0,
+          "ports": {
+            "type": 1,
+            "ranges": {
+              "ports": [],
+              "range": {
+                "from": 55536,
+                "to": 55899
+              },
+              "process": []
+            }
+          },
+          "pro": 1,
+          "ips": {
+            "type": 0,
+            "ip": "192.0.2.1",
+            "cidr": {
+              "net": "",
+              "len": 0
+            },
+            "country": ""
+          },
+          "allow": true,
+          "priority": 3,
+          "enable": true
+        }
+      ]
+    }
+  ],
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.security.firewall.getting"
+}

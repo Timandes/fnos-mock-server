@@ -1,0 +1,19 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": {
+    "mode": "default",
+    "ddns": "",
+    "customize": {
+      "protocol": "",
+      "domain": "",
+      "port": "",
+      "host": ""
+    },
+    "fnDefault": "http://www.timandes.cn",
+    "rateLimit": {
+      "upload": 0,
+      "download": 0
+    }
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": {
+    "list": [
+      {
+        "entryKey": "entry:1",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "文件管理",
+        "folderPath": "",
+        "sort": 10,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.file-manager",
+          "serviceName": "trim.file-manager",
+          "appID": "",
+          "title": "文件管理",
+          "icon": "/static/app/icons/trim.file-manager/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": false,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:1001",
+        "source": "trim.app-center",
+        "itemType": "entry",
+        "name": "影视",
+        "folderPath": "",
+        "sort": 20,
+        "entry": {
+          "appType": "",
+          "sourceName": "trim.app-center",
+          "appName": "trim.media",
+          "serviceName": "trim.media",
+          "appID": "",
+          "title": "影视",
+          "icon": "/app-center-static/serviceicon/trim.media/ui/images/icon_{0}.png",
+          "openType": "url",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {
+            "path": "/vol1/example"
+          },
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": false,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:2",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "系统设置",
+        "folderPath": "",
+        "sort": 30,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.setting",
+          "serviceName": "trim.setting",
+          "appID": "",
+          "title": "系统设置",
+          "icon": "/static/app/icons/trim.setting/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:1002",
+        "source": "trim.app-center",
+        "itemType": "entry",
+        "name": "虚拟机",
+        "folderPath": "",
+        "sort": 40,
+        "entry": {
+          "appType": "",
+          "sourceName": "trim.app-center",
+          "appName": "trim.vm",
+          "serviceName": "trim.vm",
+          "appID": "",
+          "title": "虚拟机",
+          "icon": "/app-center-static/serviceicon/trim.vm/ui/images/icon_{0}.png",
+          "openType": "iframe",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {
+            "path": "/vol1/example"
+          },
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:3",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "应用中心",
+        "folderPath": "",
+        "sort": 50,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.app-center",
+          "serviceName": "trim.app-center",
+          "appID": "",
+          "title": "应用中心",
+          "icon": "/static/app/icons/trim.app-center/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:4",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "下载",
+        "folderPath": "",
+        "sort": 60,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.download-center",
+          "serviceName": "trim.download-center",
+          "appID": "",
+          "title": "下载",
+          "icon": "/static/app/icons/trim.download-center/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": false,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:5",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "Docker",
+        "folderPath": "",
+        "sort": 70,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.docker",
+          "serviceName": "trim.docker",
+          "appID": "",
+          "title": "Docker",
+          "icon": "/static/app/icons/trim.docker/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:6",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "备份",
+        "folderPath": "",
+        "sort": 80,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.backup-and-sync",
+          "serviceName": "trim.backup-and-sync",
+          "appID": "",
+          "title": "备份",
+          "icon": "/static/app/icons/trim.backup-and-sync/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": false,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:7",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "资源管理",
+        "folderPath": "",
+        "sort": 90,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.resource-manager",
+          "serviceName": "trim.resource-manager",
+          "appID": "",
+          "title": "资源管理",
+          "icon": "/static/app/icons/trim.resource-manager/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:8",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "日志",
+        "folderPath": "",
+        "sort": 100,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.log-center",
+          "serviceName": "trim.log-center",
+          "appID": "",
+          "title": "日志",
+          "icon": "/static/app/icons/trim.log-center/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": true,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      },
+      {
+        "entryKey": "entry:9",
+        "source": "built-in",
+        "itemType": "entry",
+        "name": "回收站",
+        "folderPath": "",
+        "sort": 110,
+        "entry": {
+          "appType": "",
+          "sourceName": "built-in",
+          "appName": "trim.file-manager.trash",
+          "serviceName": "trim.file-manager.trash",
+          "appID": "",
+          "title": "回收站",
+          "icon": "/static/app/icons/trim.file-manager.trash/icon.png",
+          "openType": "open",
+          "gatewaySocket": "",
+          "gatewayPrefix": "",
+          "url": {},
+          "fullURL": "",
+          "fnConnectConfig": {
+            "allowProxy": 0
+          },
+          "display": {
+            "isAdmin": false,
+            "show": true,
+            "order": 0
+          },
+          "status": null,
+          "fileTypes": null,
+          "state": "",
+          "microApp": false,
+          "nativeApp": false,
+          "installTime": "",
+          "updateTime": ""
+        }
+      }
+    ]
+  }
+}

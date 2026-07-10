@@ -1,0 +1,21 @@
+{
+  "data": {
+    "ftpEnable": true,
+    "mode": 2,
+    "ipv4Addr": "192.0.2.1",
+    "option": {
+      "port": 21,
+      "timeout": 900,
+      "passiveLow": 55536,
+      "passiveHigh": 55899,
+      "securityPolicy": 3,
+      "ftp": true,
+      "ssl": 3,
+      "passiveIp": ""
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.share.ftp.opt"
+}

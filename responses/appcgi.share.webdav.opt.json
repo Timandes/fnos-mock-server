@@ -1,0 +1,20 @@
+{
+  "data": {
+    "webdavEnable": true,
+    "mode": 2,
+    "httpAddr": "http://www.timandes.cn",
+    "httpsAddr": "https://www.timandes.cn",
+    "ipv4Addr": "192.0.2.1",
+    "option": {
+      "http": true,
+      "https": true,
+      "httpPort": 5005,
+      "httpsPort": 5006,
+      "infinity": true
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.share.webdav.opt"
+}

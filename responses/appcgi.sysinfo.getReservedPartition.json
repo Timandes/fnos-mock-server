@@ -1,0 +1,7 @@
+{
+  "errno": 100060001,
+  "reqid": "0000000000000000000000000000",
+  "result": "fail",
+  "rev": "0.1",
+  "req": "appcgi.sysinfo.getReservedPartition"
+}

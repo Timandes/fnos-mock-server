@@ -1,0 +1,9 @@
+{
+  "groupInfo": {
+    "group": "Users",
+    "gid": 1001,
+    "comment": "default user group"
+  },
+  "result": "succ",
+  "reqid": "0000000000000000000000000000"
+}

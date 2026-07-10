@@ -1,0 +1,25 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": {
+    "licenseCode": "<redacted>",
+    "name": "OS License",
+    "tag": "",
+    "group": "enterprise",
+    "sign": "<redacted>",
+    "status": 1,
+    "validFrom": 1704067200000,
+    "validTo": 4102444800000,
+    "period": 0,
+    "payload": {
+      "feature": {
+        "appcenter": "enabled",
+        "diskLimit": 9999999,
+        "sysupdate": "enabled",
+        "userLimit": 9999999
+      },
+      "validFrom": 1704067200000,
+      "validTo": 4102444800000
+    }
+  }
+}

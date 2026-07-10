@@ -1,0 +1,35 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "data": [
+    {
+      "id": 2,
+      "name": "Gmail",
+      "type": "code",
+      "port": 587
+    },
+    {
+      "id": 3,
+      "name": "QQ邮箱",
+      "type": "code",
+      "port": 587
+    },
+    {
+      "id": 4,
+      "name": "126邮箱",
+      "type": "code",
+      "port": 994
+    },
+    {
+      "id": 5,
+      "name": "163邮箱",
+      "type": "code",
+      "port": 994
+    },
+    {
+      "id": 6,
+      "name": "自定义",
+      "type": "custom"
+    }
+  ]
+}

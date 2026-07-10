@@ -1,0 +1,15 @@
+{
+  "data": {
+    "resetToFactory": {
+      "supported": false,
+      "reason": 100160031
+    },
+    "restoreStorage": {
+      "supported": false
+    }
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.sysrestore.getInfo"
+}

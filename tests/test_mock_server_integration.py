@@ -1,14 +1,327 @@
 """Integration tests for fnOS Mock Server using pyfnos client."""
 
 import asyncio
+import json
+import re
+from ipaddress import ip_address
+from pathlib import Path
+from urllib.parse import urlsplit
 
 import pytest
 from fnos import FnosClient
+from server.handlers import route_request
 
 
 # Test server configuration
 TEST_HOST = "localhost"
 TEST_PORT = 5666
+RESPONSES_DIR = Path(__file__).resolve().parents[1] / "responses"
+CAPTURED_REQID = "0000000000000000000000000000"
+DYNAMIC_RESPONSE_REQUESTS = {"appcgi.sysinfo.getHostName"}
+
+
+@pytest.mark.parametrize(
+    "response_path",
+    sorted(RESPONSES_DIR.glob("*.json")),
+    ids=lambda path: path.name,
+)
+def test_response_file_is_valid_and_routable(response_path: Path):
+    """Every response must be a routable JSON object with a replaceable reqid."""
+    with response_path.open(encoding="utf-8") as response_file:
+        response = json.load(response_file)
+    assert isinstance(response, dict)
+    assert isinstance(response.get("reqid"), str)
+    if "req" in response:
+        assert response["req"] == response_path.stem
+    routed = route_request({"req": response_path.stem, "reqid": "test-reqid"})
+    if response_path.stem in DYNAMIC_RESPONSE_REQUESTS:
+        assert routed.get("result") == "succ"
+        assert routed.get("req") == response_path.stem
+        assert routed.get("reqid") == "test-reqid"
+    else:
+        expected = {**response, "reqid": "test-reqid"}
+        assert routed == expected
+
+
+def test_unknown_response_is_not_routable():
+    """An error response must not satisfy the fixture-routing contract."""
+    routed = route_request({"req": "definitely.missing.fixture", "reqid": "test-reqid"})
+    assert routed.get("result") == "fail"
+    assert routed.get("errmsg") == "Unknown request type: definitely.missing.fixture"
+
+
+def test_captured_environment_fingerprints_are_synthetic():
+    """Captured fixtures must use stable examples instead of NAS fingerprints."""
+    cache_devices = json.loads((RESPONSES_DIR / "stor.listCachedev.json").read_text())
+    assert [disk["name"] for disk in cache_devices["disk"]] == ["nvme0n1", "nvme1n1"]
+    assert [disk["modelName"] for disk in cache_devices["disk"]] == [
+        "Example NVMe SSD 2TB",
+        "Example NVMe SSD 1TB",
+    ]
+    assert {disk["firmwareVersion"] for disk in cache_devices["disk"]} == {"1.0.0"}
+    assert [disk["size"] for disk in cache_devices["disk"]] == [
+        2_000_000_000_000,
+        1_000_000_000_000,
+    ]
+
+    entry_list = json.loads(
+        (RESPONSES_DIR / "appcgi.sac.entry.v1.getEntryList.json").read_text()
+    )
+    desktop = json.loads(
+        (RESPONSES_DIR / "appcgi.sac.entry.v1.getUserDesktop.json").read_text()
+    )
+    expected_installed_entries = {"trim.media": "entry:1001", "trim.vm": "entry:1002"}
+    assert {
+        entry["appName"]: entry["entryKey"]
+        for entry in entry_list["data"]["list"]
+        if entry["appName"] in expected_installed_entries
+    } == expected_installed_entries
+    assert {
+        item["entry"]["appName"]: item["entryKey"]
+        for item in desktop["data"]["list"]
+        if item["entry"]["appName"] in expected_installed_entries
+    } == expected_installed_entries
+
+    mount_list = json.loads((RESPONSES_DIR / "appcgi.mountmgr.list.json").read_text())
+    assert {mount["time"] for mount in mount_list["rsp"]} == {1_704_067_200}
+    group_list = json.loads((RESPONSES_DIR / "user.groupList.json").read_text())
+    assert group_list["uver"] == 111_677_748_019_200
+    license_info = json.loads((RESPONSES_DIR / "appcgi.license.soft.get.json").read_text())
+    ipc_license = json.loads(
+        (RESPONSES_DIR / "appcgi.license.soft.ipc.get.json").read_text()
+    )
+    certificate = json.loads((RESPONSES_DIR / "appcgi.netsvr.cert.list.json").read_text())
+    assert (license_info["data"]["validFrom"], license_info["data"]["validTo"]) == (
+        1_704_067_200_000,
+        4_102_444_800_000,
+    )
+    assert (ipc_license["data"]["validFrom"], ipc_license["data"]["validTo"]) == (
+        1_704_067_200_000,
+        4_102_444_800_000,
+    )
+    assert (certificate["data"][0]["validFrom"], certificate["data"][0]["validTo"]) == (
+        1_704_067_200_000,
+        4_102_444_800_000,
+    )
+
+    image_list = json.loads(
+        (RESPONSES_DIR / "appcgi.dockermgr.imageList.json").read_text()
+    )
+    assert [image["RepoTags"] for image in image_list["rsp"]] == [
+        ["example/app:latest"],
+        ["example/worker:1.0"],
+    ]
+    assert {image["Created"] for image in image_list["rsp"]} == {1_704_067_200}
+    image_ids = [image["Id"] for image in image_list["rsp"]]
+    assert len(image_ids) == len(set(image_ids))
+    assert [image["RepoDigests"][0].rsplit("@", 1)[1] for image in image_list["rsp"]] == image_ids
+
+    network_list = json.loads(
+        (RESPONSES_DIR / "appcgi.dockermgr.networkList.json").read_text()
+    )
+    network_ids = [network["Id"] for network in network_list["rsp"]]
+    assert len(network_ids) == len(set(network_ids))
+    container_ids = {
+        container_id
+        for network in network_list["rsp"]
+        for container_id in network["Containers"]
+    }
+    assert container_ids.isdisjoint(network_ids)
+
+    network_info = json.loads(
+        (RESPONSES_DIR / "appcgi.network.net.info.json").read_text()
+    )["data"]["ifs"]
+    assert [slave["name"] for slave in network_info["slaves"]] == ["eth1", "eth2"]
+    assert network_info["ipv4"] == ["192.0.2.2"]
+    assert network_info["ipv4Addr"] == "192.0.2.2"
+    assert network_info["ipv4Broad"] == "192.0.2.255"
+    assert network_info["ipv4Gateway"] == "192.0.2.1"
+    assert network_info["ipv4Mask"] == "255.255.255.0"
+
+    process_list = json.loads(
+        (RESPONSES_DIR / "appcgi.resmon.proc.list.json").read_text()
+    )
+    assert [process["name"] for process in process_list["data"]["list"]] == [
+        "example-service",
+        "example-worker",
+    ]
+    assert [process["pid"] for process in process_list["data"]["list"]] == [1001, 1002]
+
+    traffic = json.loads(
+        (RESPONSES_DIR / "appcgi.security.flowaudit.traffic.json").read_text()
+    )
+    assert [process["process"] for process in traffic["data"]] == [
+        "example-service",
+        "example-worker",
+    ]
+    assert [process["pid"] for process in traffic["data"]] == [1001, 1002]
+
+    directory = json.loads((RESPONSES_DIR / "file.lsDir.json").read_text())
+    assert directory["uver"] == 111_677_748_019_200
+    assert [item["name"] for item in directory["files"]] == [
+        "example-folder",
+        "example.txt",
+    ]
+    assert {item["mtim"] for item in directory["files"]} == {1_704_067_200}
+    assert {item["btim"] for item in directory["files"]} == {1_704_067_200}
+
+    removable = json.loads((RESPONSES_DIR / "stor.listRemovable.json").read_text())
+    assert [disk["modelName"] for disk in removable["removable"]] == [
+        "Example Removable SSD 1TB",
+        "Example Removable SSD 2TB",
+    ]
+    assert {disk["firmwareVersion"] for disk in removable["removable"]} == {"1.0.0"}
+    assert [disk["fssize"] for disk in removable["removable"]] == [
+        1_000_000_000_000,
+        2_000_000_000_000,
+    ]
+
+    login_devices = json.loads(
+        (RESPONSES_DIR / "user.listLoginDevice.json").read_text()
+    )
+    assert [device["deviceName"] for device in login_devices["loginDevice"]] == [
+        "Example Browser",
+        "Example Mobile Device",
+    ]
+    assert {device["loginTime"] for device in login_devices["loginDevice"]} == {
+        1_704_067_200
+    }
+
+
+def test_captured_response_sensitive_values_are_allowlisted():
+    """Captured fixtures must not regain raw environment identifiers or secrets."""
+    allowed_url_hosts = {"www.timandes.cn"}
+    allowed_ipv4 = {
+        "192.0.2.0",
+        "192.0.2.1",
+        "192.0.2.2",
+        "192.0.2.255",
+        "255.255.255.0",
+    }
+    allowed_emails = {"user@example.com"}
+    allowed_macs = {"00:00:5E:00:53:01"}
+    allowed_ip_literals = allowed_ipv4 | {"2001:db8::1"}
+    exact_sensitive_keys = {
+        "accesskey",
+        "backid",
+        "deviceid",
+        "machineid",
+        "serialnumber",
+        "sign",
+        "tid",
+        "uuid",
+    }
+    sensitive_key_fragments = {
+        "apikey",
+        "licensecode",
+        "passwd",
+        "password",
+        "privatekey",
+        "publickey",
+        "secret",
+        "signature",
+        "token",
+    }
+    address_keys = {
+        "addr",
+        "address",
+        "domain",
+        "fqdn",
+        "host",
+        "hostname",
+        "hwaddr",
+        "ip",
+        "ipv4",
+        "ipv4addr",
+        "ipv4broad",
+        "ipv4dns",
+        "ipv4gateway",
+        "ipv4mask",
+        "ipv6",
+        "ipv6dns",
+        "ipv6gateway",
+        "mac",
+        "macaddr",
+        "macaddress",
+        "serveraddress",
+    }
+    ip_value_keys = {
+        "addr",
+        "ip",
+        "ipv4",
+        "ipv4addr",
+        "ipv4broad",
+        "ipv4dns",
+        "ipv4gateway",
+        "ipv4mask",
+        "ipv6",
+        "ipv6dns",
+        "ipv6gateway",
+    }
+    allowed_address_values = allowed_ip_literals | allowed_macs | {
+        "",
+        "www.timandes.cn",
+        "http://www.timandes.cn",
+        "https://www.timandes.cn",
+    }
+    url_pattern = re.compile(r"https?://[^\s\"<>]+", re.IGNORECASE)
+    ipv4_pattern = re.compile(r"(?<![\w:])(?:\d{1,3}\.){3}\d{1,3}(?![\w:])")
+    email_pattern = re.compile(
+        r"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}", re.IGNORECASE
+    )
+    mac_pattern = re.compile(r"(?:[0-9a-f]{2}:){5}[0-9a-f]{2}", re.IGNORECASE)
+    volume_pattern = re.compile(r"/vol\d+(?:/[^\s,;\"']*)?")
+    raw_fingerprint_pattern = re.compile(
+        r"nas-11|/Users/|Fanxiang|ZHITAI|TiPlus|H240509|ZTA22003|"
+        r"iPad|iPhone|Mac OS|Windows-Google|ghcr\.io/timandes",
+        re.IGNORECASE,
+    )
+
+    captured_paths = []
+    for response_path in RESPONSES_DIR.glob("*.json"):
+        response = json.loads(response_path.read_text())
+        if response.get("reqid") != CAPTURED_REQID:
+            continue
+        captured_paths.append(response_path)
+
+        def inspect_value(value, key=""):
+            if isinstance(value, dict):
+                for child_key, child_value in value.items():
+                    inspect_value(child_value, child_key)
+                return
+            if isinstance(value, list):
+                for child_value in value:
+                    inspect_value(child_value, key)
+                return
+            if not isinstance(value, str):
+                return
+
+            assert not raw_fingerprint_pattern.search(value), response_path
+            assert {
+                urlsplit(url).hostname for url in url_pattern.findall(value)
+            } <= allowed_url_hosts, response_path
+            assert set(ipv4_pattern.findall(value)) <= allowed_ipv4, response_path
+            assert {
+                email.lower() for email in email_pattern.findall(value)
+            } <= allowed_emails, response_path
+            assert {
+                mac.upper() for mac in mac_pattern.findall(value)
+            } <= allowed_macs, response_path
+            assert set(volume_pattern.findall(value)) <= {"/vol1/example"}, response_path
+
+            normalized_key = re.sub(r"[^a-z0-9]", "", key.lower())
+            if normalized_key in address_keys:
+                assert value in allowed_address_values, response_path
+            if normalized_key in ip_value_keys and value:
+                assert str(ip_address(value)) in allowed_ip_literals, response_path
+            if normalized_key in exact_sensitive_keys or any(
+                fragment in normalized_key for fragment in sensitive_key_fragments
+            ):
+                assert value in {"", "<redacted>"} or set(value) == {"0"}, response_path
+
+        inspect_value(response)
+
+    assert len(captured_paths) == 78
 
 
 @pytest.fixture

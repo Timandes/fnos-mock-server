@@ -1,0 +1,70 @@
+{
+  "result": "succ",
+  "reqid": "0000000000000000000000000000",
+  "rsp": [
+    {
+      "name": "example-mount",
+      "mountPoint": "/vol1/example",
+      "time": 1704067200,
+      "comment": "example",
+      "userName": "user",
+      "address": "www.timandes.cn",
+      "path": "/vol1/example",
+      "port": 445,
+      "type": 0,
+      "enabled": true,
+      "password": "<redacted>",
+      "proto": "http",
+      "cloudStorageType": 0,
+      "cloudStorageTypeStr": ""
+    },
+    {
+      "name": "example-mount",
+      "mountPoint": "/vol1/example",
+      "time": 1704067200,
+      "comment": "example",
+      "userName": "user",
+      "address": "www.timandes.cn",
+      "path": "/vol1/example",
+      "port": 445,
+      "type": 0,
+      "enabled": true,
+      "password": "<redacted>",
+      "proto": "http",
+      "cloudStorageType": 0,
+      "cloudStorageTypeStr": ""
+    },
+    {
+      "name": "example-mount",
+      "mountPoint": "/vol1/example",
+      "time": 1704067200,
+      "comment": "example",
+      "userName": "user",
+      "address": "www.timandes.cn",
+      "path": "/vol1/example",
+      "port": 445,
+      "type": 0,
+      "enabled": true,
+      "password": "<redacted>",
+      "proto": "http",
+      "cloudStorageType": 0,
+      "cloudStorageTypeStr": ""
+    },
+    {
+      "name": "example-mount",
+      "mountPoint": "/vol1/example",
+      "time": 1704067200,
+      "comment": "example",
+      "userName": "user",
+      "address": "www.timandes.cn",
+      "path": "/vol1/example",
+      "port": 445,
+      "type": 0,
+      "enabled": true,
+      "password": "<redacted>",
+      "proto": "http",
+      "cloudStorageType": 0,
+      "cloudStorageTypeStr": ""
+    }
+  ]
+}

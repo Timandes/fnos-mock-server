@@ -1,0 +1,36 @@
+{
+  "removable": [
+    {
+      "mountName": "/vol1/example",
+      "path": "/vol1/example",
+      "name": "nvme0n1p1",
+      "diskName": "nvme0n1",
+      "modelName": "Example Removable SSD 1TB",
+      "serialNumber": "000000000000000000",
+      "type": "SSD",
+      "protocol": "NVMe",
+      "firmwareVersion": "1.0.0",
+      "logicalBlockSize": 512,
+      "nvmeVersion": "1.4",
+      "fssize": 1000000000000,
+      "frsize": 750000000000
+    },
+    {
+      "mountName": "/vol1/example",
+      "path": "/vol1/example",
+      "name": "nvme1n1p1",
+      "diskName": "nvme1n1",
+      "modelName": "Example Removable SSD 2TB",
+      "serialNumber": "000000000000000000",
+      "type": "SSD",
+      "protocol": "NVMe",
+      "firmwareVersion": "1.0.0",
+      "logicalBlockSize": 512,
+      "nvmeVersion": "1.4",
+      "fssize": 2000000000000,
+      "frsize": 1500000000000
+    }
+  ],
+  "result": "succ",
+  "reqid": "0000000000000000000000000000"
+}

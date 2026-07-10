@@ -1,0 +1,9 @@
+{
+  "data": {
+    "rsp": ""
+  },
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.1",
+  "req": "appcgi.downloadcenter.config.getDefaultSaveDir"
+}

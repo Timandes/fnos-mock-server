@@ -1,0 +1,7 @@
+{
+  "data": {
+    "uid": 1000
+  },
+  "req": "appcgi.tfa.security.v1.user.getTwofaConfig",
+  "reqid": "0000000000000000000000000000"
+}

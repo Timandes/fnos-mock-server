@@ -1,0 +1,12 @@
+{
+  "data": {
+    "isAdmin": true,
+    "keyword": "",
+    "page": 1,
+    "pageSize": 100,
+    "sortColumn": "createdTime",
+    "sortType": "DESC"
+  },
+  "req": "appcgi.sharesvr.share.link.list",
+  "reqid": "0000000000000000000000000000"
+}

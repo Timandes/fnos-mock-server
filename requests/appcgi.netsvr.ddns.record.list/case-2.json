@@ -1,0 +1,8 @@
+{
+  "data": {
+    "page": 1,
+    "pageSize": 999
+  },
+  "req": "appcgi.netsvr.ddns.record.list",
+  "reqid": "0000000000000000000000000000"
+}

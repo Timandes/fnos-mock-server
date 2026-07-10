@@ -1,0 +1,8 @@
+{
+  "data": {
+    "page": 1,
+    "pageSize": 200
+  },
+  "req": "appcgi.license.soft.list",
+  "reqid": "0000000000000000000000000000"
+}

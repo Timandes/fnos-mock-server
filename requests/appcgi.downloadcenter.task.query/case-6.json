@@ -1,0 +1,6 @@
+{
+  "init_flag": true,
+  "req": "appcgi.downloadcenter.task.query",
+  "reqid": "0000000000000000000000000000",
+  "state_filter": 64
+}

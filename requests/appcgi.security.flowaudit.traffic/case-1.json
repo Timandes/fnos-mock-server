@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "pid": 1001,
+      "process": "example-process"
+    },
+    {
+      "pid": 1002,
+      "process": "example-worker"
+    }
+  ],
+  "req": "appcgi.security.flowaudit.traffic",
+  "reqid": "0000000000000000000000000000"
+}

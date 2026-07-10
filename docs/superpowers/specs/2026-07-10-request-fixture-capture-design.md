@@ -91,8 +91,13 @@ Automated tests validate every `requests/*/case-*.json` file:
 - case numbers are contiguous and canonical cases are unique within each `req` directory;
 - sensitive strings, addresses, paths, identifiers, and authentication material satisfy the
   same allowlist-based audit used by captured response fixtures;
-- every request directory corresponds to a response file added on the current branch relative
-  to `main`.
+- every request directory has a matching captured response fixture whose top-level `reqid` is
+  `0000000000000000000000000000`.
+
+The one-time extraction report separately verifies that every persisted `req` belongs to the
+allowlist computed from response files added on the current branch relative to `main`. Keeping
+that branch-dependent check out of the permanent test suite ensures the tests continue to pass
+after the feature branch is merged into `main`.
 
 The full test suite must pass before the raw capture is removed and the new request fixtures are
 reported as complete.

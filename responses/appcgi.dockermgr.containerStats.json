@@ -1,0 +1,6 @@
+{
+  "req": "appcgi.dockermgr.containerStats",
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.9.27"
+}

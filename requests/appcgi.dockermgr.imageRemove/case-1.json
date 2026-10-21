@@ -1,0 +1,5 @@
+{
+  "imageId": "example/app",
+  "req": "appcgi.dockermgr.imageRemove",
+  "reqid": "0000000000000000000000000000"
+}

@@ -1,0 +1,11 @@
+{
+  "req": "appcgi.dockermgr.imageRemove",
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.9.27",
+  "rsp": [
+    {
+      "Untagged": "example/app:latest"
+    }
+  ]
+}

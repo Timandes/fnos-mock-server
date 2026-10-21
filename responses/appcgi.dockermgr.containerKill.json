@@ -1,0 +1,7 @@
+{
+  "req": "appcgi.dockermgr.containerKill",
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.9.27",
+  "rsp": "ok"
+}

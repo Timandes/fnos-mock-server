@@ -1,0 +1,30 @@
+{
+  "req": "appcgi.dockermgr.containerTop",
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.9.27",
+  "rsp": {
+    "Processes": [
+      [
+        "user",
+        "1001",
+        "1000",
+        "0",
+        "Jan01",
+        "?",
+        "00:00:00",
+        "/vol1/example --path.rootfs=/vol1/example"
+      ]
+    ],
+    "Titles": [
+      "UID",
+      "PID",
+      "PPID",
+      "C",
+      "STIME",
+      "TTY",
+      "TIME",
+      "CMD"
+    ]
+  }
+}

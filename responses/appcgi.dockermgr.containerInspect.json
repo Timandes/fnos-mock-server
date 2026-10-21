@@ -1,0 +1,280 @@
+{
+  "req": "appcgi.dockermgr.containerInspect",
+  "reqid": "0000000000000000000000000000",
+  "result": "succ",
+  "rev": "0.9.27",
+  "rsp": {
+    "AppArmorProfile": "docker-default",
+    "Args": [
+      "--path.rootfs=/vol1/example"
+    ],
+    "Config": {
+      "AttachStderr": true,
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "Cmd": [
+        "--path.rootfs=/vol1/example"
+      ],
+      "Domainname": "",
+      "Entrypoint": [
+        "/vol1/example"
+      ],
+      "Env": [
+        "PATH=/vol1/example"
+      ],
+      "ExposedPorts": {
+        "9100/tcp": {}
+      },
+      "Hostname": "www.timandes.cn",
+      "Image": "example/worker:1.0",
+      "Labels": {
+        "com.docker.compose.config-hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "",
+        "com.docker.compose.image": "sha256:0000000000000000000000000000000000000000000000000000000000000002",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "example",
+        "com.docker.compose.project.config_files": "/vol1/example",
+        "com.docker.compose.project.working_dir": "/vol1/example",
+        "com.docker.compose.service": "example-worker",
+        "com.docker.compose.version": "2.40.3",
+        "io.prometheus.image.variant": "busybox",
+        "maintainer": "user@example.com",
+        "org.opencontainers.image.authors": "user",
+        "org.opencontainers.image.description": "Example worker service",
+        "org.opencontainers.image.documentation": "https://www.timandes.cn",
+        "org.opencontainers.image.licenses": "Apache License 2.0",
+        "org.opencontainers.image.source": "https://www.timandes.cn",
+        "org.opencontainers.image.title": "example-worker",
+        "org.opencontainers.image.url": "https://www.timandes.cn",
+        "org.opencontainers.image.vendor": "Example"
+      },
+      "OnBuild": null,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Tty": false,
+      "User": "user",
+      "Volumes": null,
+      "WorkingDir": ""
+    },
+    "Created": "2024-01-01T00:00:00Z",
+    "Driver": "overlay2",
+    "ExecIDs": null,
+    "GpuEnabled": false,
+    "GraphDriver": {
+      "Data": {
+        "ID": "0000000000000000000000000000000000000000000000000000000000000000",
+        "LowerDir": "/vol1/example",
+        "MergedDir": "/vol1/example",
+        "UpperDir": "/vol1/example",
+        "WorkDir": "/vol1/example"
+      },
+      "Name": "overlay2"
+    },
+    "HostConfig": {
+      "AutoRemove": false,
+      "Binds": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceWriteIOps": null,
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "CapAdd": null,
+      "CapDrop": null,
+      "Cgroup": "",
+      "CgroupParent": "",
+      "CgroupnsMode": "private",
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "ContainerIDFile": "",
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpuShares": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "Devices": null,
+      "Dns": [],
+      "DnsOptions": [],
+      "DnsSearch": [],
+      "ExtraHosts": [],
+      "GroupAdd": null,
+      "IOMaximumBandwidth": 0,
+      "IOMaximumIOps": 0,
+      "IpcMode": "private",
+      "Isolation": "",
+      "Links": null,
+      "LogConfig": {
+        "Config": {
+          "max-file": "5",
+          "max-size": "100m"
+        },
+        "Type": "json-file"
+      },
+      "MaskedPaths": [
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example"
+      ],
+      "Memory": 0,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "Mounts": [
+        {
+          "BindOptions": {
+            "CreateMountpoint": true,
+            "Propagation": "rslave"
+          },
+          "ReadOnly": true,
+          "Source": "/vol1/example",
+          "Target": "/vol1/example",
+          "Type": "bind"
+        }
+      ],
+      "NanoCpus": 0,
+      "NetworkMode": "host",
+      "OomKillDisable": null,
+      "OomScoreAdj": 0,
+      "PidMode": "host",
+      "PidsLimit": null,
+      "PortBindings": {},
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyPaths": [
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example",
+        "/vol1/example"
+      ],
+      "ReadonlyRootfs": false,
+      "RestartPolicy": {
+        "MaximumRetryCount": 0,
+        "Name": "always"
+      },
+      "Runtime": "runc",
+      "SecurityOpt": [
+        "label=disable"
+      ],
+      "ShmSize": 67108864,
+      "UTSMode": "",
+      "Ulimits": null,
+      "UsernsMode": "",
+      "VolumeDriver": "",
+      "VolumesFrom": null
+    },
+    "HostnamePath": "/vol1/example",
+    "HostsPath": "/vol1/example",
+    "Icon": "",
+    "Id": "0000000000000000000000000000000000000000000000000000000000000000",
+    "Image": "sha256:0000000000000000000000000000000000000000000000000000000000000002",
+    "LogPath": "/vol1/example",
+    "MountLabel": "",
+    "Mounts": [
+      {
+        "Destination": "/vol1/example",
+        "Mode": "",
+        "Propagation": "rslave",
+        "RW": false,
+        "Source": "/vol1/example",
+        "Type": "bind"
+      }
+    ],
+    "Name": "/example-container",
+    "NetworkSettings": {
+      "Bridge": "",
+      "EndpointID": "",
+      "Gateway": "",
+      "GlobalIPv6Address": "",
+      "GlobalIPv6PrefixLen": 0,
+      "HairpinMode": false,
+      "IPAddress": "",
+      "IPPrefixLen": 0,
+      "IPv6Gateway": "",
+      "LinkLocalIPv6Address": "",
+      "LinkLocalIPv6PrefixLen": 0,
+      "MacAddress": "",
+      "Networks": {
+        "host": {
+          "Aliases": null,
+          "DNSNames": null,
+          "DriverOpts": null,
+          "EndpointID": "0000000000000000000000000000000000000000000000000000000000000132",
+          "Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "",
+          "IPPrefixLen": 0,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "",
+          "NetworkID": "0000000000000000000000000000000000000000000000000000000000000101"
+        }
+      },
+      "Ports": {},
+      "SandboxID": "0000000000000000000000000000000000000000000000000000000000000131",
+      "SandboxKey": "/vol1/example",
+      "SecondaryIPAddresses": null,
+      "SecondaryIPv6Addresses": null
+    },
+    "Networks": [
+      {
+        "Driver": "host",
+        "IPv4Address": "",
+        "IPv6Address": "",
+        "Name": "host"
+      }
+    ],
+    "Path": "/vol1/example",
+    "Platform": "linux",
+    "ProcessLabel": "",
+    "Project": "example",
+    "ResolvConfPath": "/vol1/example",
+    "RestartCount": 0,
+    "State": {
+      "Dead": false,
+      "Error": "",
+      "ExitCode": 0,
+      "FinishedAt": "2024-01-01T00:00:00Z",
+      "OOMKilled": false,
+      "Paused": false,
+      "Pid": 1001,
+      "Restarting": false,
+      "Running": true,
+      "StartedAt": "2024-01-01T00:00:00Z",
+      "Status": "running"
+    }
+  }
+}

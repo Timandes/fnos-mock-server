@@ -321,7 +321,7 @@ def test_captured_response_sensitive_values_are_allowlisted():
 
         inspect_value(response)
 
-    assert len(captured_paths) == 78
+    assert len(captured_paths) == 89
 
 
 @pytest.fixture
